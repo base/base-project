@@ -27,7 +27,19 @@
     "gulp-format-md": "*",
     "mocha": "^2.4.5"
   },
-  "keywords": [],
+  "keywords": [
+    "base",
+    "base-plugin",
+    "baseplugin",
+    "create",
+    "empty",
+    "generator",
+    "init",
+    "name",
+    "plugin",
+    "project",
+    "repository"
+  ],
   "lintDeps": {
     "ignore": []
   },
