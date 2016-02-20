@@ -1,7 +1,7 @@
 {
   "name": "base-project",
   "description": "Base plugin that adds a `project` getter to the instance for getting the name of a project. Gets the project name for new (empty) projects, projects with only a .git repository, and/or projects with a package.json.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/base-project",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/base-project",
