@@ -1,6 +1,6 @@
 {
   "name": "base-project",
-  "description": "Base plugin that adds a `project` getter to the instance, for getting the name of a project in generators or templates.",
+  "description": "Base plugin that adds a `project` getter to the instance for getting the name of a project. Gets the project name for new (empty) projects, projects with only a .git repository, and/or projects with a package.json.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/base-project",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -32,12 +32,20 @@
     "ignore": []
   },
   "verb": {
+    "run": true,
+    "toc": false,
     "layout": "default",
+    "tasks": [
+      "readme"
+    ],
     "plugins": [
       "gulp-format-md"
     ],
-    "related": {
-      "list": []
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
     }
   }
 }
