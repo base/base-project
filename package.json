@@ -1,0 +1,43 @@
+{
+  "name": "base-project",
+  "description": "Base plugin that adds a `project` getter to the instance, for getting the name of a project in generators or templates.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/base-project",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/base-project",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/base-project/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "project-name": "^0.2.4"
+  },
+  "devDependencies": {
+    "base": "^0.6.7",
+    "gulp-format-md": "*",
+    "mocha": "^2.4.5"
+  },
+  "keywords": [],
+  "lintDeps": {
+    "ignore": []
+  },
+  "verb": {
+    "layout": "default",
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": []
+    }
+  }
+}
