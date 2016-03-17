@@ -10,7 +10,7 @@
 var project = require('project-name');
 
 module.exports = function(fn) {
-  return function(app) {
+  return function plugin(app) {
     fn = fn || this.options.validatePlugin;
     if (typeof fn === 'function' && !fn(this)) return;
     if (this.isRegistered('base-project')) return;
@@ -26,5 +26,7 @@ module.exports = function(fn) {
         return name || (name = project(this.cwd));
       }
     });
+
+    return plugin;
   };
 };
