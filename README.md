@@ -1,4 +1,4 @@
-# base-project [![NPM version](https://img.shields.io/npm/v/base-project.svg)](https://www.npmjs.com/package/base-project) [![Build Status](https://img.shields.io/travis/jonschlinkert/base-project.svg)](https://travis-ci.org/jonschlinkert/base-project)
+# base-project [![NPM version](https://img.shields.io/npm/v/base-project.svg)](https://www.npmjs.com/package/base-project) [![Build Status](https://img.shields.io/travis/node-base/base-project.svg)](https://travis-ci.org/node-base/base-project)
 
 > Base plugin that adds a `project` getter to the instance for getting the name of a project. Gets the project name for new (empty) projects, projects with only a .git repository, and/or projects with a package.json.
 
@@ -23,11 +23,11 @@ base.use(project());
 ## Related projects
 
 * [base-cli](https://www.npmjs.com/package/base-cli): Plugin for base-methods that maps built-in methods to CLI args (also supports methods from a… [more](https://www.npmjs.com/package/base-cli) | [homepage](https://github.com/jonschlinkert/base-cli)
-* [base-cwd](https://www.npmjs.com/package/base-cwd): Base plugin that adds a getter/setter for the current working directory. | [homepage](https://github.com/jonschlinkert/base-cwd)
+* [base-cwd](https://www.npmjs.com/package/base-cwd): Base plugin that adds a getter/setter for the current working directory. | [homepage](https://github.com/node-base/base-cwd)
 * [base-data](https://www.npmjs.com/package/base-data): adds a `data` method to base-methods. | [homepage](https://github.com/jonschlinkert/base-data)
-* [base-fs](https://www.npmjs.com/package/base-fs): base-methods plugin that adds vinyl-fs methods to your 'base' application for working with the file… [more](https://www.npmjs.com/package/base-fs) | [homepage](https://github.com/jonschlinkert/base-fs)
+* [base-fs](https://www.npmjs.com/package/base-fs): base-methods plugin that adds vinyl-fs methods to your 'base' application for working with the file… [more](https://www.npmjs.com/package/base-fs) | [homepage](https://github.com/node-base/base-fs)
 * [base-option](https://www.npmjs.com/package/base-option): Adds a few options methods to base, like `option`, `enable` and `disable`. See the readme… [more](https://www.npmjs.com/package/base-option) | [homepage](https://github.com/node-base/base-option)
-* [base-pkg](https://www.npmjs.com/package/base-pkg): Base plugin for adding a `pkg` object with get/set methods for getting data from package.json… [more](https://www.npmjs.com/package/base-pkg) | [homepage](https://github.com/jonschlinkert/base-pkg)
+* [base-pkg](https://www.npmjs.com/package/base-pkg): Base plugin for adding a `pkg` object with get/set methods for getting data from package.json… [more](https://www.npmjs.com/package/base-pkg) | [homepage](https://github.com/node-base/base-pkg)
 
 ## Contributing
 
@@ -65,7 +65,7 @@ $ npm install -d && npm test
 ## License
 
 Copyright © 2016 [Jon Schlinkert](https://github.com/jonschlinkert)
-Released under the [MIT license](https://github.com/jonschlinkert/base-project/blob/master/LICENSE).
+Released under the [MIT license](https://github.com/node-base/base-project/blob/master/LICENSE).
 
 ***
 
