@@ -23,8 +23,8 @@
     "project-name": "^0.2.4"
   },
   "devDependencies": {
-    "base": "^0.6.7",
-    "gulp-format-md": "*",
+    "base": "^0.8.1",
+    "gulp-format-md": "^0.1.7",
     "mocha": "^2.4.5"
   },
   "keywords": [
@@ -53,6 +53,16 @@
     "plugins": [
       "gulp-format-md"
     ],
+    "related": {
+      "list": [
+        "base-cli",
+        "base-cwd",
+        "base-data",
+        "base-option",
+        "base-pkg",
+        "base-fs"
+      ]
+    },
     "reflinks": [
       "verb"
     ],
