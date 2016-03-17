@@ -9,8 +9,10 @@
 
 var project = require('project-name');
 
-module.exports = function() {
+module.exports = function(fn) {
   return function(app) {
+    fn = fn || this.options.validatePlugin;
+    if (typeof fn === 'function' && !fn(this)) return;
     if (this.isRegistered('base-project')) return;
     var name;
 

@@ -30,5 +30,19 @@ describe('base-project', function() {
       base.use(project());
       assert.equal(base.project, 'base-project');
     });
+
+    it('should allow a validation fn to be defined', function() {
+      base = new Base();
+      base.use(project(function(app) {
+        return app.isFoo;
+      }));
+      assert(!base.project);
+
+      base.isFoo = true;
+      base.use(project(function(app) {
+        return app.isFoo;
+      }));
+      assert.equal(base.project, 'base-project');
+    });
   });
 });
