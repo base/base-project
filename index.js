@@ -11,9 +11,7 @@ var project = require('project-name');
 
 module.exports = function(fn) {
   return function plugin(app) {
-    fn = fn || this.options.validatePlugin;
-    if (typeof fn === 'function' && !fn(this)) return;
-    if (this.isRegistered('base-project')) return;
+    if (!isValidInstance(app, fn)) return;
     var name;
 
     this.define('project', {
@@ -30,3 +28,17 @@ module.exports = function(fn) {
     return plugin;
   };
 };
+
+function isValidInstance(app, fn) {
+  fn = fn || app.options.validatePlugin;
+  if (typeof fn === 'function' && !fn(app)) {
+    return false;
+  }
+  if (app.isRegistered('base-project')) {
+    return false;
+  }
+  if (app.isCollection || app.isView) {
+    return false;
+  }
+  return true;
+}
