@@ -15,18 +15,21 @@ describe('base-project', function() {
 
     it('should register as a plugin', function() {
       base = new Base();
+      base.isApp = true;
       base.use(project());
       assert(base.registered.hasOwnProperty('base-project'));
     });
 
     it('should expose a project getter/setter', function() {
       base = new Base();
+      base.isApp = true;
       base.use(project());
       assert.equal(typeof base.project, 'string');
     });
 
     it('should set the name of the project', function() {
       base = new Base();
+      base.isApp = true;
       base.use(project());
       assert.equal(base.project, 'base-project');
     });

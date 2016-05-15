@@ -7,13 +7,17 @@
 
 'use strict';
 
+var isValid = require('is-valid-instance');
+var isRegistered = require('is-registered');
 var project = require('project-name');
 
 module.exports = function(fn) {
   return function plugin(app) {
-    if (!isValidInstance(app, fn)) return;
-    var name;
+    if (!isValid(app, fn) || isRegistered(app, 'base-project')) {
+      return;
+    }
 
+    var name;
     this.define('project', {
       configurable: true,
       enumerable: true,
@@ -28,17 +32,3 @@ module.exports = function(fn) {
     return plugin;
   };
 };
-
-function isValidInstance(app, fn) {
-  fn = fn || app.options.validatePlugin;
-  if (typeof fn === 'function' && !fn(app)) {
-    return false;
-  }
-  if (app.isRegistered('base-project')) {
-    return false;
-  }
-  if (app.isCollection || app.isView) {
-    return false;
-  }
-  return true;
-}
