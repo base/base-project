@@ -7,15 +7,13 @@
 
 'use strict';
 
-var isValid = require('is-valid-instance');
+var isValidInstance = require('is-valid-instance');
 var isRegistered = require('is-registered');
 var project = require('project-name');
 
 module.exports = function(fn) {
-  return function plugin(app) {
-    if (!isValid(app, fn) || isRegistered(app, 'base-project')) {
-      return;
-    }
+  return function(app) {
+    if (!isValid(app, fn)) return;
 
     var name;
     this.define('project', {
@@ -28,7 +26,18 @@ module.exports = function(fn) {
         return name || (name = project(this.cwd));
       }
     });
-
-    return plugin;
   };
 };
+
+function isValid(app, fn) {
+  if (typeof fn === 'function') {
+    return fn(app);
+  }
+  if (!isValidInstance(app)) {
+    return false;
+  }
+  if (isRegistered(app, 'base-project')) {
+    return false;
+  }
+  return true;
+}
